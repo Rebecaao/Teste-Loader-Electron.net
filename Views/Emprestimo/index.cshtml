@@ -1,0 +1,35 @@
+@model IEnumerable<EmprestimosModel>
+<div class="container">
+    <div class="d-flex justify-content-between aligns-items-cente mb-5">
+        <h1>DaSHBOARD GERAL</h1>
+        <a class="btn btn-success mx-2">Cadastrar Novo Arquivo</a>
+    </div>
+    <table class="table table-dark table-houver">
+        <thead>
+            <tr>
+            <th scope="col">Arquivos</th>
+            <th scope="col">NPallet</th>
+            <th scope="col">CaixaMaster</th>
+            <th scope="col">CaixaMedia</th>
+            <th scope="col">CaixaMini</th>
+            <th scope="col">Unidades</th>
+            </tr>
+        </thead>
+        <tbody>
+
+                @if(Model != null){
+
+                @foreach(var emprestimo in Model){
+                <tr>
+                    <th scope="row">@emprestimo.Arquivo</th>
+                    <td>@emprestimo.NPallet</td>
+                    <td>@emprestimo.CaixaMaster</td>
+                    <td>@emprestimo.CaixaMedia</td>
+                    <td>@emprestimo.CaixaMini</td>
+                    <td>@emprestimo.Unidades</td>
+                </tr>
+                }
+                }
+    </tbody>
+</table>
+</div>

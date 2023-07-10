@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\loader-thales.props" />
+</Project>
